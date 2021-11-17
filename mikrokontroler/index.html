@@ -8,13 +8,48 @@
     </style>
 </head> 
 <body>
-    **Pengenalan Mikrokontroler**
+    **Bab 1 Pengenalan Mikrokontroler**
     **klinikarduino.github.io**
+    **Instagram: @klinikarduino**
     **[Home Page](../index.html)**
 
-    Apa itu Mikrokontroler?
+    Mikrokontroler
     ===========================
+    Mikrokontroler merupakan sebuah integrated circuit (IC) yang di dalamnya terdapat sistem komputer lengkap.
+    Mikrokontroler berbeda dengan mikroprosesor yang bisa kita temui pada PC (misalnya mikroprosesor Intel),
+    karena pada sebuah mikrokontroler sudah terdapat perangkat pendukung sebuah sistem komputer yaitu memori dan peripheral I/O,
+    sedangkan di dalam mikroprosesor hanya berisi CPU saja.
+
+    ![Figure [fig:atmega8]: Sebuah mikrokontroler ATmega8 yang terpasang pada board Arduino Uno. Sumber: [Wikipedia](https://id.wikipedia.org/wiki/Pengendali_mikro)](arduino_avr_atmega8.jpg width=300px)
+    
+    Pada gambar 1, terlihat sebuah contoh mikrokontroler ATmega8 yang terpasang pada board Arduino Uno.
+    Mikrokontroler ini dibuat oleh Atmel, memiliki kemampuan 8-bit, dan bekerja pada kecepatan maksimal 16 MHz.
+
+    Mikrokontroler digunakan pada berbagai macam aplikasi. Pada hampir semua alat elektronik, setidaknya ada satu atau lebih mikrokontroler
+    di dalamnya. Berikut ini beberapa contoh alat-alat elektronik yang setidaknya ada satu atau lebih mikrokontroler di dalamnya:
+    - Peralatan rumah tangga: TV, AC, lemari es, oven microwave.
+    - Gadget: PC, laptop, smartphone, console game.
+    - Alat medis: mesin X-ray, CT scan.
+    - Robotik: drone, robot arm, robot humanoid.
+    - Automotive: motor, mobil.
+    - Avionik: pesawat terbang, roket luar angkasa, satelit.
+
+    ![Figure [fig:block_mcu]: Block diagram umum sebuah mikrokontroler Sumber: [Wikipedia](https://en.wikipedia.org/wiki/System_bus)](computer_system.png width=400px)
+
+    Pada gambar 2, terlihat blok diagram umum sebuah mikrokontroler. Di dalam sebuah mikrokontroler terdapat tiga blok utama yaitu CPU, memori, dan input/output (I/O). CPU berfungsi untuk melakukan eksekusi program. memori berfungsi untuk menyimpan data. I/O berfungsi untuk berinteraksi dengan komponen eksternal. Ketiga blok utama tersebut terhubung dengan sebuah system bus.
+    
+    System bus terdiri dari tiga bagian yaitu control bus, address bus, dan data bus. Control bus melewatkan singal control dari CPU ke memori dan I/O. Address bus berfungsi untuk melewatkan alamat memori atau I/O. Data bus berfungsi untuk melewatkan sinyal data yang
+    ditransfer antara CPU ke memori dan I/O atau sebaliknya. Dengan ketiga bus tersebut, maka CPU dapat berkomunikasi dengan memori dan I/O.
 	
+    Ada banyak perusahaan yang membuat mikrokontroler. Beberapa diantaranya yaitu Atmel, Infineon, Microchip Technology, STMicroelectronics, Texas Instruments, NXP Semiconductors, Espressif Systems, dll.
+
+    ![Figure [fig:contoh_mikro]: Contoh mikrokontroler dari beberapa perusahaan: Atmel (kiri), STMicroelectronics (tengah), Espressif Systems (kanan)](contoh_mikro.png width=600px)
+
+    Pada gambar 3, terlihat contoh mikrokontroler dari beberapa perusahaan. Mikrokontroler tersebut cukup populer dan banyak digunakan oleh pelajar, hobbyist, ataupun professional.
+
+    Perbedaan Mikrokontroler dengan Mikroprosesor
+    ===========================
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700' rel='stylesheet' type='text/css'>
     <script>window.markdeepOptions = {'tocStyle':'short'};</script>
     <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
