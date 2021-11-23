@@ -34,7 +34,7 @@
     - Automotive: motor, mobil.
     - Avionik: pesawat terbang, roket luar angkasa, satelit.
 
-    ![Figure [fig:block_mcu]: Block diagram umum sebuah mikrokontroler Sumber: [Wikipedia](https://en.wikipedia.org/wiki/System_bus)](computer_system.png width=400px)
+    ![Figure [fig:block_mcu]: Block diagram umum sebuah mikrokontroler. Sumber: [Wikipedia](https://en.wikipedia.org/wiki/System_bus)](computer_system.png width=400px)
 
     Pada gambar 2, terlihat blok diagram umum sebuah mikrokontroler. Di dalam sebuah mikrokontroler terdapat tiga blok utama yaitu CPU, memori, dan input/output (I/O). CPU berfungsi untuk melakukan eksekusi program. memori berfungsi untuk menyimpan data. I/O berfungsi untuk berinteraksi dengan komponen eksternal. Ketiga blok utama tersebut terhubung dengan sebuah system bus.
     
@@ -80,8 +80,28 @@
     Power consumption | Rendah                                              | Tinggi
     [Table [tab:mcu_cpu]: Perdedaan antara mikrokontroler dan mikroprosesor]
 
-    Bagaimana Sebuah IC Dibuat?
+    Bagaimana Bagian Dalam Sebuah IC?
     ===========================
+    Sebuah IC terbuat dari bahan semikonduktor. Bahan semikonduktor yang paling sering digunakan yaitu silikon.
+    Gambar 5 merupakan bagian dalam dari sebuah IC. Die merupakan material silikon tempat transistor-transistor difabrikasi.
+    Package merupakan material epoxy resin yang berfungsi untuk melindungi bagian dalam IC. Wire bond berfungsi untuk menghubungkan die dengan pin, dan pin berfungsi untuk menghubungkan IC tersebut dengan komponen eksternal.
+
+    ![Figure [fig:bagian_dalam_ic]: Bagian dalam dari sebuah IC. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](bagian_dalam_ic.png width=400px)
+
+    Transistor-transistor tersebut dihubungkan satuan sama lain dengan interkonesi dari material tembaga untuk membentuk suatu blok yang lebih kompleks seperti CPU, memori, dan sebagainya.
+    Dalam sebuah IC bisa terdapat ribuan sampai miliaran transistor tergantung dari jenis IC-nya. Gambar 6 merupakan bagian dari die yang diperbesar. Pada gambar tersebut dapat terlihat wire bond serta interkonesi yang menghubungkan transistor.
+
+    ![Figure [fig:die_zoom]: Bagian die yang diperbesar. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](die_zoom.jpg width=400px)
+
+    Pada gambar 7, dapat terlihat sebuah die yang dipotong melintang. Terlihat bagian interkoneksi yang terbuat dari metal, transistor, dan bulk silicon. Bulk silicon menjadi bagian dasar tempat transistor dibuat.
+
+    ![Figure [fig:cross_section_ic]: Potongan melintang dari sebuah die. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](cross_section_ic.png width=500px)
+
+    Jika bagian cross section dari sebuah transistor MOSFET diperbesar, maka akan terlihat seperti pada gambar 8.
+    Terlihat bagian utama dari transistor MOSFET yaitu source, drain, dan gate. Semakin kecil panjang gate-nya, maka ukuran keseluruhan 
+    sebuah transistor akan lebih kecil, sehingga jumlah transistor dalam ukuran die yang sama bisa menjadi lebih banyak.
+
+    ![Figure [fig:cross_section_transistor]: Potongan melintang dari sebuah transistor MOSFET](cross_section_transistor.png width=250px)
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700' rel='stylesheet' type='text/css'>
     <script>window.markdeepOptions = {'tocStyle':'short'};</script>
