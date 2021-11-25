@@ -22,7 +22,7 @@
 
     ![Figure [fig:atmega8]: Sebuah mikrokontroler ATmega8 yang terpasang pada board Arduino Uno. Sumber: [Wikipedia](https://id.wikipedia.org/wiki/Pengendali_mikro)](arduino_avr_atmega8.jpg width=300px)
     
-    Pada gambar 1, terlihat sebuah contoh mikrokontroler ATmega8 yang terpasang pada board Arduino Uno.
+    Pada Figure [fig:atmega8], terlihat sebuah contoh mikrokontroler ATmega8 yang terpasang pada board Arduino Uno.
     Mikrokontroler ini dibuat oleh Atmel, memiliki kemampuan 8-bit, dan bekerja pada kecepatan maksimal 16 MHz.
 
     Mikrokontroler digunakan pada berbagai macam aplikasi. Pada hampir semua alat elektronik, setidaknya ada satu atau lebih mikrokontroler
@@ -36,7 +36,7 @@
 
     ![Figure [fig:block_mcu]: Block diagram umum sebuah mikrokontroler. Sumber: [Wikipedia](https://en.wikipedia.org/wiki/System_bus)](computer_system.png width=400px)
 
-    Pada gambar 2, terlihat blok diagram umum sebuah mikrokontroler. Di dalam sebuah mikrokontroler terdapat tiga blok utama yaitu CPU, memori, dan input/output (I/O). CPU berfungsi untuk melakukan eksekusi program. memori berfungsi untuk menyimpan data. I/O berfungsi untuk berinteraksi dengan komponen eksternal. Ketiga blok utama tersebut terhubung dengan sebuah system bus.
+    Pada Figure [fig:block_mcu], terlihat blok diagram umum sebuah mikrokontroler. Di dalam sebuah mikrokontroler terdapat tiga blok utama yaitu CPU, memori, dan input/output (I/O). CPU berfungsi untuk melakukan eksekusi program. memori berfungsi untuk menyimpan data. I/O berfungsi untuk berinteraksi dengan komponen eksternal. Ketiga blok utama tersebut terhubung dengan sebuah system bus.
     
     System bus terdiri dari tiga bagian yaitu control bus, address bus, dan data bus. Control bus melewatkan singal control dari CPU ke memori dan I/O. Address bus berfungsi untuk melewatkan alamat memori atau I/O. Data bus berfungsi untuk melewatkan sinyal data yang
     ditransfer antara CPU ke memori dan I/O atau sebaliknya. Dengan ketiga bus tersebut, maka CPU dapat berkomunikasi dengan memori dan I/O.
@@ -45,7 +45,7 @@
 
     ![Figure [fig:contoh_mikro]: Contoh mikrokontroler dari beberapa perusahaan: Atmel (kiri), STMicroelectronics (tengah), Espressif Systems (kanan)](contoh_mikro.png width=600px)
 
-    Pada gambar 3, terlihat contoh mikrokontroler dari beberapa perusahaan. Mikrokontroler tersebut cukup populer dan banyak digunakan oleh pelajar, hobbyist, ataupun professional.
+    Pada Figure [fig:contoh_mikro], terlihat contoh mikrokontroler dari beberapa perusahaan. Mikrokontroler tersebut cukup populer dan banyak digunakan oleh pelajar, hobbyist, ataupun professional.
 
     Perbedaan Mikrokontroler dengan Mikroprosesor
     ===========================
@@ -70,7 +70,7 @@
     Prosesor untuk general purpose memiliki kecepatan clock yang tinggi biasanya dalam satuan GHz, sehingga computation power-nya besar dan konsumsi dayanya juga besar.
     Sedangkan prosesor untuk mikrokontroler memiliki kecepatan clock yang rendah biasanya dalam satuan MHz, sehingga computation power-nya dan konsumsi dayanya juga lebih rendah.
 
-    Perdedaan antara mikrokontroler dan mikroprosesor dirangkum pada tabel di bawah ini:
+    Perdedaan antara mikrokontroler dan mikroprosesor dirangkum pada Table [tab:mcu_cpu] di bawah ini:
 
     Parameter         | Mikrokontroler                                      | Mikroprosesor
     ------------------|-----------------------------------------------------|----------------------------------------------------
@@ -83,30 +83,28 @@
     Bagaimana Bagian Dalam Sebuah IC?
     ===========================
     Sebuah IC terbuat dari bahan semikonduktor. Bahan semikonduktor yang paling sering digunakan yaitu silikon.
-    Gambar 5 merupakan bagian dalam dari sebuah IC. Die merupakan material silikon tempat transistor-transistor difabrikasi.
+    Figure [fig:bagian_dalam_ic] merupakan bagian dalam dari sebuah IC. Die merupakan material silikon tempat transistor-transistor difabrikasi.
     Package merupakan material epoxy resin yang berfungsi untuk melindungi bagian dalam IC. Wire bond berfungsi untuk menghubungkan die dengan pin, dan pin berfungsi untuk menghubungkan IC tersebut dengan komponen eksternal.
 
     ![Figure [fig:bagian_dalam_ic]: Bagian dalam dari sebuah IC. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](bagian_dalam_ic.png width=400px)
 
     Transistor-transistor tersebut dihubungkan satu sama lain dengan interkoneksi dari material tembaga untuk membentuk suatu blok yang lebih kompleks seperti CPU, memori, dan sebagainya.
-    Dalam sebuah IC bisa terdapat ribuan sampai miliaran transistor tergantung dari jenis IC-nya. Gambar 6 merupakan bagian dari die yang diperbesar. Pada gambar tersebut dapat terlihat wire bond serta interkoneksi yang menghubungkan transistor.
+    Dalam sebuah IC bisa terdapat ribuan sampai miliaran transistor tergantung dari jenis IC-nya. Figure [fig:die_zoom] merupakan bagian dari die yang diperbesar. Pada gambar tersebut dapat terlihat wire bond serta interkoneksi yang menghubungkan transistor.
 
     ![Figure [fig:die_zoom]: Bagian die yang diperbesar. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](die_zoom.jpg width=400px)
 
-    Pada gambar 7, dapat terlihat sebuah die yang dipotong melintang. Terlihat bagian interkoneksi yang terbuat dari metal, transistor, dan bulk silicon. Jenis transistor yang biasa digunakan pada IC digital yaitu transistor MOSFET. Bulk silicon menjadi bagian dasar tempat transistor dibuat.
+    Pada Figure [fig:cross_section_ic], dapat terlihat sebuah die yang dipotong melintang. Terlihat bagian interkoneksi yang terbuat dari metal, transistor, dan bulk silicon. Jenis transistor yang biasa digunakan pada IC digital yaitu transistor MOSFET. Bulk silicon menjadi bagian dasar tempat transistor dibuat.
 
     ![Figure [fig:cross_section_ic]: Potongan melintang dari sebuah die. Sumber: [SparkFun](https://learn.sparkfun.com/tutorials/integrated-circuits/inside-the-ic)](cross_section_ic.png width=500px)
 
-    Jika bagian cross section dari sebuah transistor MOSFET diperbesar, maka akan terlihat seperti pada gambar 8.
+    Jika bagian cross section dari sebuah transistor MOSFET diperbesar, maka akan terlihat seperti pada Figure [fig:cross_section_transistor].
     Terlihat bagian utama dari transistor MOSFET yaitu source, drain, dan gate. Semakin kecil panjang gate-nya, maka ukuran keseluruhan 
     sebuah transistor akan lebih kecil, sehingga jumlah transistor dalam ukuran die yang sama bisa menjadi lebih banyak. Hukum Moore menyatakan bahwa jumlah transistor dalam sebuah IC akan meningkat dua kali lipat setiap dua tahun sekali.
 
     ![Figure [fig:cross_section_transistor]: Potongan melintang dari sebuah transistor MOSFET](cross_section_transistor.png width=250px)
 
-    
-
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700' rel='stylesheet' type='text/css'>
-    <script>window.markdeepOptions = {'tocStyle':'short'};</script>
+    <script>window.markdeepOptions = {'tocStyle':'long'};</script>
     <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
     <script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
 </body>
