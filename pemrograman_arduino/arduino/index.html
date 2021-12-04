@@ -23,7 +23,7 @@
     Arduino juga menyediakan platform cloud untuk memudahkan kita dalam membuat prototype IoT.
 
     Hardware Official Arduino
-    ---------------------------
+    ===========================
 
     ![Figure [fig:arduino_uno_mega]: Arduino Uno dan Arduino Mega](arduino_uno_mega.jpg width=550px)
 
@@ -74,7 +74,7 @@
     Board ini cocok untuk digunakan pada project embedded AI. 
 
     Hardware Third Party
-    ---------------------------
+    ===========================
 
     ![Figure [fig:arduino_stm32]: STM32 Bluepill dan STM32 Nucleo-64](arduino_stm32.jpg width=600px)
 
@@ -103,7 +103,7 @@
     Untuk mempelajari jenis module ESP32 yang tersedia di pasaran, silahkan mengunjungi website [esp32.net](http://esp32.net/).
 
     Software Arduino
-    ---------------------------
+    ===========================
     Selain merupakan open source hardware, Arduino juga merupakan open source software.
     Figure [fig:arduino_ide] memperlihatkan Arduino IDE yang kita gunakan untuk menulis, meng-compile, dan meng-upload kode ke board. 
 
@@ -118,6 +118,19 @@
     development project IoT. Terdapat dashboard yang memudahkan kita untuk memonitor sensor-sensor.
 
     ![Figure [fig:arduino_iot_cloud]: Arduino IoT Cloud](arduino_iot_cloud.jpg width=600px)
+
+    Flow Pemrograman Arduino
+    ===========================
+    Figure [fig:programming_flow] mengilustrasikan flow pemrograman Arduino. Flow dimulai dari ide yang akan kita buat.
+    Ide kita tersebut dibuat menjadi kode Arduino dengan bantuan Arduino editor baik offline maupun online.
+    Kemudian, kode Arduino tersebut akan di-compile menjadi kode mesin dengan Arduino compiler.
+    Terakhir, kode mesin tersebut akan di-upload ke board Arduino dengan menggunakan Arduino uploader.
+
+    ![Figure [fig:programming_flow]: Flow pemrograman Arduino](programming_flow.jpg width=300px)
+
+    Arduino editor, compiler, dan uploader merupakan bagian dari Arduino IDE.
+    Software Arduino IDE dapat di-download dari link [ini](https://www.arduino.cc/en/software).
+    Untuk menggunakan Arduino IDE versi online, maka dapat mengunjungi link [ini](https://create.arduino.cc/editor).
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700' rel='stylesheet' type='text/css'>
     <script>window.markdeepOptions = {'tocStyle':'long'};</script>
