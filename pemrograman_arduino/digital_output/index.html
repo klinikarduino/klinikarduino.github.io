@@ -45,6 +45,35 @@
     Sebelum kita menggunakan suatu board mikrokontroler, sebaiknya kita mengetahui level tegangan yang digunakan oleh board tersebut
     agar tidak terjadi kesalahan yang dapat merusak board tersebut.
 
+    Figure [fig:level_tegangan] hanya menggambarkan level tegangan secara sederhana.
+    Pada kenyataannya level tegangan yang merepresentasikan nilai HIGH dan LOW itu berupa range tegangan seperti pada Figure [fig:level_tegangan_detail].
+    Gambar tersebut merupakan detail level tegangan 3.3V pada ESP32.
+
+    * $V_{OH}$: tegangan **OUTPUT** minimum yang akan dihasilkan ketika memberikan logika **HIGH**.
+    * $V_{IH}$: tegangan **INPUT** minimum agar terbaca sebagai logika **HIGH**.
+    * $V_{IL}$: tegangan **OUTPUT** maksimum yang akan dihasilkan ketika memberikan logika **LOW**.
+    * $V_{OL}$: tegangan **INPUT** maksimum agar terbaca sebagai logika **LOW**.
+
+    ![Figure [fig:level_tegangan_detail]: Detail level tegangan 3.3V](level_tegangan_detail.jpg width=500px)
+
+    Tegangan output minimum untuk logika HIGH $(V_{OH})$ adalah $2.64V$.
+    Ini berarti ketika ESP32 mengeluarkan logika HIGH, maka tegangannya selalu lebih besar dari $2.64V$ sampai $3.3V$.
+    Tegangan input minimum untuk logika HIGH $(V_{IH})$ adalah $2.475V$.
+    Ini berarti nilai tegangan lebih besar dari $2.475V$ sampai $3.3V$ akan terbaca sebagai logika HIGH.
+
+    Tegangan output maksimum untuk logika LOW $(V_{OL})$ adalah $0.33V$.
+    Ini berarti ketika ESP32 mengeluarkan logika LOW, maka tegangannya selalu lebih kecil dari $0.33V$ sampai $0V$.
+    Tegangan input maksimum untuk logika LOW $(V_{IH})$ adalah $0.825V$.
+    Ini berarti nilai tegangan lebih kecil dari $0.825V$ sampai $0V$ akan terbaca sebagai logika LOW.
+
+    Ada perbedaan tegangan sebesar $0.165V$ antara tegangan output dan tegangan input HIGH. Ini biasanya disebut sebagai noise margin.
+    Noise margin pada tegangan output dan tegangan input LOW yaitu sebesar $0.495V$.
+
+    Kemudian, apa yang akan terjadi jika tegangannya berada di antara $0.33V$ dan $2.475V$?
+    Tegangan tersebut tidak memiliki nilai logika yang terdefinisi atau disebut juga sebagai floating.
+    Ketika suatu pin dalam keadaan floating, maka tidak ada kepastian nilai logikanya apakah HIGH atau LOW,
+    karena bisa saja nilai logikanya sedang berosilasi antara HIGH dan LOW yang diakibatkan oleh noise eksternal.
+
     Digital Output
     ===========================
     Digital output merupakan cara paling sederhana yang bisa dilakukan mikrokontroler untuk mengontrol komponen lain.
