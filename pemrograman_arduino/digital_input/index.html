@@ -56,8 +56,8 @@
 
     * $V_{OH}$: tegangan **OUTPUT** minimum yang akan dihasilkan ketika memberikan logika **HIGH**.
     * $V_{IH}$: tegangan **INPUT** minimum agar terbaca sebagai logika **HIGH**.
-    * $V_{IL}$: tegangan **OUTPUT** maksimum yang akan dihasilkan ketika memberikan logika **LOW**.
-    * $V_{OL}$: tegangan **INPUT** maksimum agar terbaca sebagai logika **LOW**.
+    * $V_{IL}$: tegangan **INPUT** maksimum agar terbaca sebagai logika **LOW**.
+    * $V_{OL}$: tegangan **OUTPUT** maksimum yang akan dihasilkan ketika memberikan logika **LOW**.
 
     ![Figure [fig:level_tegangan_detail]: Detail level tegangan 3.3V](../digital_output/level_tegangan_detail.jpg width=500px)
 
@@ -166,6 +166,7 @@
     ---------------------------
     Rule of thumb untuk nilai resistor pull-down atau pull-up yang biasa digunakan yaitu $3.3k\Omega - 10k\Omega$.
     Untuk design yang membutuhkan low power, maka nilai resistor pull-down atau pull-up yang biasa digunakan yaitu $50k\Omega - 100k\Omega$.
+    Untuk analisis lebih detail dari resistor pull-up dapat dipelajari pada artikel [Analisis Rangkaian Resistor Pull-Up](../pull_up/index.html).
 
     Contoh Program
     ===========================
