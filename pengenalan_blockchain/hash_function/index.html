@@ -1,0 +1,81 @@
+<head>
+    <meta charset="utf-8" lang="en">
+    <link rel="icon" href="../../logo.png">
+    <style class="fallback">
+    body {
+        visibility: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    </style>
+</head> 
+<body>
+    **Apa itu Hash Function?**
+    **Instagram: [@klinikarduino](https://www.instagram.com/klinikarduino/)**
+    **Facebook: [@klinikarduino](https://web.facebook.com/klinikarduino)**
+    **by [Erwin Setiawan](https://yohanes-erwin.github.io/)**
+    
+    <center>**[Pengenalan Blockchain](../index.html)**</center>
+
+    Fungsi Hash
+    ===========================
+    Berikut ini merupakan pengertian dari fungsi hash yang dikutip dari sumber slide kuliah kriptografi IF ITB:
+
+> Fungsi hash adalah fungsi yang menerima masukan string yang panjangnya sembarang,
+> lalu mentransformasikannya menjadi string keluaran yang panjangnya tetap (fixed)
+> (umumnya berukuran jauh lebih kecil daripada ukuran string semula).
+
+    Hash dapat dianalogikan sebagai fingerprint dari suatu data.
+    Data tersebut bisa berupa text, gambar, suara, ataupun video.
+    Jika terjadi perubahan secara sengaja ataupun tidak pada data tersebut, maka nilai hash-nya pun akan berubah.
+
+    Oleh karena itu, kita dapat mengetahui apakah data tersebut telah dimodifikasi atau tidak dengan cara mencocokan nilai hash-nya.
+    Sehingga, salah satu kegunaan hash yaitu untuk menjaga integritas data.
+
+    Fungsi Satu Arah
+    ===========================
+    Fungsi hash merupakan fungsi satu arah.
+    Hal ini berarti nilai hash tidak bisa dikembalikan menjadi data awal.
+    Hal ini berbeda dengan enkripsi, dimana data yang sudah dienkripsi (ciphertext) dapat dikembalikan ke data awal (plaintext) dengan proses dekripsi.
+
+    Sebagai contoh, file video yang berukuran besar misalnya 1 GB kemudian dimasukan ke fungsi hash, sehingga output-nya hanya nilai hash yang berukuran 256-bit (32 bytes).
+    Proses perhitungan hash menghilangkan banyak informasi dari video tersebut (dari 1 GB menjadi 32 bytes), sehingga akan sangat sulit untuk mengembalikan nilai hash tersebut ke video input-nya.
+
+    Karena sifatnya yang satu arah tersebut, fungsi hash juga digunakan untuk penyimpanan password, sehingga yang tersimpan di dalam database adalah hash dari password kita. Oleh karena itu, jika database tersebut bisa dibobol oleh hacker, maka hacker tersebut tidak akan tahu password kita karena untuk melakukan reverse hash hampir tidak mungkin. Walaupun tidak mungkin, itu bukan berarti nilai hash 100% dijamin aman.
+
+    SHA-256
+    ===========================
+    Figure [fig:sha256] mengilustrasikan bagaimana hash function bekerja.
+    Salah satu algortima hash yang banyak digunakan yaitu SHA-256.
+    Fungsi hash SHA-256 ini digunakan pada aplikasi cryptocurrency salah satunya Bitcoin.
+
+    SHA memiliki kepanjangan Secure Hashing Algorithm.
+    SHA-256 merupakan keluarga dari SHA-2 yang didesain oleh United States National Security Agency (NSA).
+    SHA-256 memiliki panjang hash 256-bit (32 bytes). Nilai hash biasanya ditampilkan sebagai 64 digit angka hexadecimal.
+
+    ![Figure [fig:sha256]: Fungsi hash SHA256 mengubah data text menjadi hash](sha256.jpg width=500px)
+
+    Dapat kita perhatikan pada input pertama dan kedua (“Hello, world!” dan “Hello, World!”), hanya berbeda pada huruf “w” dan “W”, tetapi nilai hash-nya sangat jauh berbeda.
+    Sehingga, kita bisa mengetahui bahwa kedua input tersebut berbeda.
+
+    Untuk melakukan perhitungan hash SHA-256, kita bisa menggunakan kalkulator online.
+    Berikut ini juga merupakan contoh untuk menghitung hash SHA-256 pada bahasa pemrograman Python:
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ python linenumbers
+    import hashlib
+
+    print(hashlib.sha256(b"Hello, world!").hexdigest())
+    print(hashlib.sha256(b"Hello, World!").hexdigest())
+    print(hashlib.sha256(b"Hello, world!4250").hexdigest())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Hash Collision
+    ===========================
+    Hash collision merupakan kondisi dua atau lebih input menghasilkan nilai hash yang sama.
+    Adanya collision menunjukkan bahwa fungsi hash tersebut tidak aman.
+    Untuk SHA-256, sampai saat ini [belum pernah](https://crypto.stackexchange.com/questions/47809/why-havent-any-sha-256-collisions-been-found-yet) ditemukan adanya hash collision.
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700' rel='stylesheet' type='text/css'>
+    <script>window.markdeepOptions = {'tocStyle':'long'};</script>
+    <script src="../../markdeep.min.js"></script>
+    <script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+</body>
